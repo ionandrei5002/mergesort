@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 2.6)
-project(MergeSort)
+project(mergesort)
 
-add_executable(MergeSort main.cpp free_list_pool.h)
+set(HEADERS free_list_allocator.h free_list_pool.h pool_interface.h)
+
+add_executable(MergeSort main.cpp ${HEADERS})
 target_link_libraries(MergeSort)
 target_compile_options(MergeSort
   PRIVATE
